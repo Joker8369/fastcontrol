@@ -11,6 +11,14 @@
   </head>
 
   <body>
+  <div class = 'navbar'>
+  <%= render 'shared/navbar' %>
+  </div>
+  <div class = 'products'>
     <%= yield %>
+  </div>
+  <div class = 'bill'>
+   <%= render 'shared/bill' %>
+   </div>
   </body>
 </html>

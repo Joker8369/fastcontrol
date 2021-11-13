@@ -1,0 +1,13 @@
+<h1>Lists#index</h1>
+<p>Find me in app/views/lists/index.html.erb</p>
+<div class ='cards'>
+<% @lists.each do |list| %>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2></h2> <br>
+        <%= link_to list.title, list_path(list)%>
+      </div>
+    </div>
+    <% end %>
+</div>
