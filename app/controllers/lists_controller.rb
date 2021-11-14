@@ -8,12 +8,12 @@ class ListsController < ApplicationController
   end
 
   def new
-    @table = List.new
+    @list = List.new
   end
 
   def create
     @list = List.create(list_params)
-    if @tlist.save
+    if @list.save
       redirect_to root_path
     else
       render :new
