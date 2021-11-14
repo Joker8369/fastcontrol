@@ -21,7 +21,7 @@ class ListsController < ApplicationController
   end
 
   def show
-    @product_list = @list.product
+    @product_list = @list.products
   end
 
   def update
