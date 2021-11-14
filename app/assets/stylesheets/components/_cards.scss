@@ -5,6 +5,13 @@
   grid-gap: 16px;
   border: none;
 }
+#cards {
+  margin: 1% 0 1% 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  border: none;
+}
 .card-product {
   overflow: hidden;
   height: 120px;
