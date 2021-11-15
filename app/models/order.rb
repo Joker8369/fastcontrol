@@ -1,3 +1,3 @@
 class Order < ApplicationRecord
-  has_many :payment
+  has_many :payments
 end

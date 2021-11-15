@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true%>
   </head>
-
+  <script>
+  const cart = {
+    names:[],
+    prices:[]
+  }
+</script>
   <body>
   <div class='banner'></div>
   <div class= 'main'>
@@ -23,5 +27,26 @@
    <%= render 'shared/bill' %>
    </div>
    </div>
+<script>
+  document.querySelectorAll('button').forEach(item => {
+      item.addEventListener('click', event =>{
+        const name = event.target.dataset.name;
+        const price = parseFloat(event.target.dataset.price);
+        cart.names.push(name) , cart.prices.push(price), console.log(cart)
+        const listItem = content => `<li class="list-group-item">${content}</li>`;
+
+        const unorderedList = (items) => {
+        const content = items.map(item => listItem(item)).join('\n  ');
+        return `<ul class="list-group">${content}</ul>`;
+        };
+        const initName = unorderedList(cart.names)
+        console.log(initName)
+        const initPrice = unorderedList(cart.prices)
+        console.log(initPrice)
+      return  console.log(cart.names), console.log(cart.prices), initName
+    })
+  })
+</script>
   </body>
+
 </html>
