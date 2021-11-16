@@ -16,13 +16,13 @@ cake = List.create!(
 )
 
 pastries = List.create!(
-  title: 'pastries'
+  title: 'Pastries'
 )
 bread = List.create!(
-  title: 'bread'
+  title: 'Bread'
 )
 sweets = List.create!(
-  title: 'sweets'
+  title: 'Sweets'
 )
 puts 'Lists create'
 
@@ -30,18 +30,18 @@ Product.destroy_all
 puts 'No products'
 
 Product.create!(
-  name: 'Paris Brest',
+  name: 'ParisBrest',
   price: 20.5,
   list_id: "#{cake.id}"
 )
 
 Product.create!(
-  name: 'croissant',
+  name: 'Croissant',
   price: 11.5,
   list_id: "#{pastries.id}"
 )
 Product.create!(
-  name: 'baguette',
+  name: 'Baguette',
   price: 0.99,
   list_id: "#{bread.id}"
 )
