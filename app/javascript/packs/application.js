@@ -14,7 +14,6 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import initCart from "../plugins/bill";
-
 document.addEventListener('turbolinks:load', () => {
   initCart();
 });
